@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto&family=Ubuntu&display=swap");
+/* to change chrome inbuilt css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-weight: 500;
+  line-height: 1.4;
+  background-color: #0f0f0f;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+/* to make all icon same     */
+.icon {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px;
+  font-size: 0.7rem;
+}
+/* to add color in icons */
+svg {
+  fill: #fff;
+  margin-bottom: 10px;
+}
+/* main container */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+/* to make side menu */
+.side-menu {
+  width: 5%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+/* to make nav-bar */
+.main-conainer {
+  width: 100%;
+}
+header {
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin-top: -5px;
+}
+.center-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2e2e2e;
+  border-radius: 70px;
+  overflow: hidden;
+  height: 40px;
+  background-color: #121212;
+}
+.search input {
+  background-color: #121212;
+  min-width: 556px;
+  height: 100%;
+  padding-left: 15px;
+  font-size: 1rem;
+  border: none;
+}
+.search-ic {
+  height: 100%;
+  padding: 6px 20px;
+  background-color: #222222;
+  border-left: 1px solid #2e2e2e;
+}
+.mic {
+  background-color: #141414;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.right-nav {
+  display: flex;
+  margin-right: 20px;
+}
+.avatar img {
+  border-radius: 100%;
+}
+/* to make recomandation under nav-bar */
+.recomandation {
+  margin: 10px 20px;
+  display: flex;
+  gap: 10px;
+}
+.light,
+.dark {
+  background-color: #f1f1f1;
+  color: #141414;
+  border-radius: 10px;
+  padding: 5px 10px;
+  display: grid;
+  font-size: 0.9rem;
+  place-items: center;
+}
+.dark {
+  background-color: #222222;
+  color: #f1f1f1;
+}
