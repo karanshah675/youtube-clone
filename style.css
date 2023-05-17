@@ -26,7 +26,7 @@ body {
 
   font-size: 0.7rem;
 }
-/* to add color in icons */
+
 svg {
   fill: #fff;
   margin-bottom: 10px;
@@ -39,51 +39,71 @@ svg {
 /* to make side menu */
 .side-menu {
   width: 5%;
-  /* justify-content: center; */
-  align-items: center;
   display: flex;
-
-
+  align-items: center;
   flex-direction: column;
+  gap: 10px;
 }
-.side-menu .icon{
- width: 100%;
- height: 70px;
- /* margin: 10px; */
+.side-menu .icon {
+  width: 100%;
+  height: 70px;
   margin: 0;
-
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
 }
-.icon i{
+.icon i {
   width: 24px;
   height: 24px;
   margin-bottom: 5px;
 }
-.guide i{
-  margin-top: -15px;
+.side-menu .icon:hover {
+  background-color: #272727;
+
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
-/* to make nav-bar */
+
+.guide i {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
+}
+.round {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+
+  padding: 0 5px 3px;
+
+  align-items: end;
+  margin-top: 8px;
+  transition: 0.2s ease-in-out;
+}
+.round:hover {
+  background-color: #272727;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+/* main-container that takes nav-bar and thumbnails */
 .main-conainer {
   width: 100%;
 }
-header {
-  display: flex;
-  flex-direction: column;
-}
 
-nav {
-  width: 100%;
+/* to make nav-bar */
+.nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
   margin-top: -5px;
-  
-  
+  min-width: 100%;
 }
-.nav-logo{
+.nav-logo {
   position: relative;
+  cursor: pointer;
 }
-.nav-logo div p{
+.nav-logo div p {
   position: absolute;
   top: -5px;
   right: -15px;
@@ -95,7 +115,6 @@ nav {
   justify-content: center;
   align-items: center;
 }
-
 .search {
   display: flex;
   align-items: center;
@@ -113,29 +132,70 @@ nav {
   padding-left: 15px;
   font-size: 1rem;
   border: none;
-  color: #2e2e2e;
+  color: #fff;
+
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+  caret-color: #fff;
+}
+.search input:focus {
+  outline-color: #0a5bc5;
+}
+.search input::placeholder {
+  color: #ccc;
 }
 .search-ic {
   height: 100%;
   padding: 6px 20px;
   background-color: #222222;
   border-left: 1px solid #2e2e2e;
+  cursor: pointer;
 }
 .mic {
   background-color: #141414;
   width: 40px;
   height: 40px;
-  padding: 10px;
+  padding: 5px 10px 3px;
   border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+}
+.mic:hover {
+  background-color: #272727;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 .right-nav {
   display: flex;
   margin-right: 20px;
+  align-items: center;
+  gap: 10px;
 }
 .avatar img {
   border-radius: 100%;
 }
+.avatar img:hover {
+  cursor: pointer;
+}
+.r-icon {
+  width: 40px;
+  height: 40px;
+  padding: 10px 10px 3px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+}
+.r-icon:hover {
+  background-color: #272727;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
 /* to make recomandation under nav-bar */
 .recomandation {
   margin: 10px 20px;
@@ -151,13 +211,25 @@ nav {
   display: grid;
   font-size: 0.9rem;
   place-items: center;
+  transition: 0.2s ease-in-out;
 }
 .dark {
   background-color: #222222;
   color: #f1f1f1;
 }
+.dark:hover {
+  background-color: #3f3f3f;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.light:hover {
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
 
 /* thumbnail */
+
 .thambnails {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -165,16 +237,28 @@ nav {
   padding: 24px 100px;
 }
 .tmn-content {
-  width: 350px;
+  cursor: pointer;
+  width: 100%;
 }
-.tmn-avatar {
-  display: flex;
-  gap: 10px;
+
+.tmn-img {
+  overflow: hidden;
 }
 
 .tmn-img img {
+  transition: 0.2s ease-in-out;
   border-radius: 10px;
   width: 100%;
+}
+.tmn-img img:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
+
+.tmn-avatar {
+  margin-top: 6px;
+  display: flex;
+  gap: 10px;
 }
 .avatar-img img {
   border-radius: 100%;
@@ -187,4 +271,17 @@ nav {
 .tmn-detail {
   font-size: 0.9rem;
   color: #aaaaaa;
+  display: inline;
+}
+.tmn-detail:hover :nth-child(1) {
+  color: #fff;
+}
+.dot {
+  display: flex;
+}
+.dot svg {
+  visibility: hidden;
+}
+.tmn-heading:hover svg {
+  visibility: visible;
 }
