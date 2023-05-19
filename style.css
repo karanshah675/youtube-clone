@@ -11,7 +11,9 @@ body {
   line-height: 1.5;
   background-color: #0f0f0f;
   font-family: "Roboto", sans-serif;
-  color: #fff;
+  color: #fff;   
+  overflow-x: hidden;
+    overflow-y: auto;
 }
 /* to make all icon same     */
 .icon {
@@ -284,4 +286,52 @@ svg {
 }
 .tmn-heading:hover svg {
   visibility: visible;
+}
+
+/* media-queries */
+@media screen and (max-width: 700px) {
+  .center-nav {
+    display: none;
+  }
+  .side-menu {
+    position: fixed;
+    bottom: 0;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+  }
+  .side-menu .guide {
+    display: none;
+  }
+  .recomandation {
+    width: 1000px;
+ 
+    margin: 0;
+  }
+  .thambnails {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px 10px;
+    padding: 24px 0;
+  }
+  .avatar-img img {
+    border-radius: 100%;
+    width: 40px;
+    margin-left: 20px;
+  }
+  .tmn-heading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-nav {
+    margin-right: 0px;
+  }
+  .dot svg {
+    display: none;
+  }
 }
