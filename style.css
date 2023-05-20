@@ -386,6 +386,8 @@ div.responsive-search {
 
   div.responsive-search {
     display: initial;
+    margin-bottom: 5px;
+    padding: 8px;
   }
   .explore {
     display: initial;
