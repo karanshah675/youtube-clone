@@ -373,6 +373,7 @@ div.responsive-search {
 
   div.responsive-search {
     display: initial;
+    padding-bottom: 37px;
   }
   .explore {
     display: initial;
