@@ -339,7 +339,10 @@ div.responsive-search {
   .tmn-img img {
     transform: scale(1.1);
   }
- 
+  .tmn-img {
+    overflow: visible;
+    padding: 10px 0;
+  }
   .tmn-avatar {
     margin-top: 10px;
   }
