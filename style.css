@@ -316,6 +316,7 @@ div.responsive-search {
     width: 100%;
     height: 50px;
     z-index: 1;
+     border-top: 1px solid #222222;
     
   }
   .side-menu .guide {
