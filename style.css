@@ -11,9 +11,10 @@ body {
   line-height: 1.5;
   background-color: #0f0f0f;
   font-family: "Roboto", sans-serif;
-  color: #fff;   
+  color: #fff;
+  position: relative;
   overflow-x: hidden;
-    overflow-y: auto;
+  overflow-y: scroll;
 }
 /* to make all icon same     */
 .icon {
@@ -104,6 +105,7 @@ svg {
 .nav-logo {
   position: relative;
   cursor: pointer;
+  width: 6em;
 }
 .nav-logo div p {
   position: absolute;
@@ -176,6 +178,9 @@ svg {
   align-items: center;
   gap: 10px;
 }
+div.responsive-search {
+  display: none;
+}
 .avatar img {
   border-radius: 100%;
 }
@@ -203,6 +208,8 @@ svg {
   margin: 10px 20px;
   display: flex;
   gap: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .light,
 .dark {
@@ -229,7 +236,9 @@ svg {
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
-
+.explore {
+  display: none;
+}
 /* thumbnail */
 
 .thambnails {
@@ -273,7 +282,6 @@ svg {
 .tmn-detail {
   font-size: 0.9rem;
   color: #aaaaaa;
-  display: inline;
 }
 .tmn-detail:hover :nth-child(1) {
   color: #fff;
@@ -290,6 +298,9 @@ svg {
 
 /* media-queries */
 @media screen and (max-width: 700px) {
+  .nav-bar {
+    margin: 10px 5px;
+  }
   .center-nav {
     display: none;
   }
@@ -307,31 +318,61 @@ svg {
   .side-menu .guide {
     display: none;
   }
+
   .recomandation {
-    width: 1000px;
- 
-    margin: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 35px;
+    margin: 5px;
   }
+
   .thambnails {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 30px 10px;
     padding: 24px 0;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .tmn-img img {
+    transform: scale(1.1);
+  }
+  .tmn-img {
+    overflow: hidden;
+  }
+  .tmn-avatar {
+    margin-top: 10px;
   }
   .avatar-img img {
-    border-radius: 100%;
-    width: 40px;
-    margin-left: 20px;
+    width: 35px;
+    margin-left: 16px;
   }
   .tmn-heading {
     display: flex;
     flex-direction: column;
   }
-
+  .tmn-detail {
+    margin-top: -10px;
+    display: flex;
+    gap: 10px;
+  }
   .right-nav {
     margin-right: 0px;
   }
+
   .dot svg {
+    visibility: visible;
+  }
+  .newvideo {
     display: none;
+  }
+
+  div.responsive-search {
+    display: initial;
+  }
+  .explore {
+    display: initial;
+    border-radius: 5px;
   }
 }
