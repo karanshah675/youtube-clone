@@ -314,10 +314,14 @@ div.responsive-search {
     align-items: center;
     width: 100%;
     height: 50px;
-    z-index:10;
+    z-index: 1;
+    
   }
   .side-menu .guide {
     display: none;
+  }
+  .side-menu .icon{
+    margin-top: 5px;
   }
 
   .recomandation {
@@ -326,7 +330,7 @@ div.responsive-search {
     overflow-y: hidden;
     height: 35px;
     margin: 5px;
-     margin-bottom: -20px;
+    margin-bottom: -20px;
   }
 
   .thambnails {
@@ -334,8 +338,10 @@ div.responsive-search {
     grid-template-columns: repeat(1, 1fr);
     gap: 30px 10px;
     padding: 24px 0;
-    font-size: 1rem;
+    
     line-height: 1;
+    margin-bottom: 50px;
+
   }
   .tmn-img img {
     transform: scale(1.1);
@@ -352,11 +358,12 @@ div.responsive-search {
     margin-left: 16px;
   }
   .tmn-heading {
+    font-size: 0.9rem;
     display: flex;
     flex-direction: column;
   }
   .tmn-detail {
-    margin-top: -10px;
+    margin-top: 3px;
     display: flex;
     gap: 10px;
   }
@@ -366,6 +373,8 @@ div.responsive-search {
 
   .dot svg {
     visibility: visible;
+    margin-top: -20px;
+    width: 30px !important;
   }
   .newvideo {
     display: none;
@@ -373,7 +382,6 @@ div.responsive-search {
 
   div.responsive-search {
     display: initial;
-    padding-bottom: 37px;
   }
   .explore {
     display: initial;
