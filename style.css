@@ -288,6 +288,7 @@ div.responsive-search {
 }
 .dot {
   display: flex;
+  align-items: center;
 }
 .dot svg {
   visibility: hidden;
@@ -356,6 +357,7 @@ div.responsive-search {
   .avatar-img img {
     width: 35px;
     margin-left: 16px;
+      margin-right: 3px;
   }
   .tmn-heading {
     font-size: 0.9rem;
@@ -375,6 +377,7 @@ div.responsive-search {
     visibility: visible;
     margin-top: -20px;
     width: 30px !important;
+        height: 20px !important;
   }
   .newvideo {
     display: none;
