@@ -305,6 +305,9 @@ div.responsive-search {
   .center-nav {
     display: none;
   }
+   .nav-logo p{
+    display: none;
+  }
   .side-menu {
     position: fixed;
     bottom: 0;
