@@ -368,10 +368,14 @@ div.responsive-search {
     display: flex;
     flex-direction: column;
   }
-  .tmn-detail {
+ .tmn-detail {
     margin-top: 3px;
     display: flex;
-    gap: 10px;
+ 
+  }
+  .detail-dot::after{
+    content: '•';
+    margin: 0 4px;
   }
   .right-nav {
     margin-right: 0px;
