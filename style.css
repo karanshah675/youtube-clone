@@ -325,10 +325,16 @@ div.responsive-search {
   .side-menu .guide {
     display: none;
   }
-  .side-menu .icon{
+   .side-menu .icon{
     margin-top: 5px;
+    height: 100%;
+    transition: 0.4s ease-in-out;
   }
-
+  .side-menu .icon:hover{
+    fill: #fff;
+    background-color: #0f0f0f;
+    transition: 0.4s ease-in-out;  
+  }
   .recomandation {
     white-space: nowrap;
     overflow-x: auto;
